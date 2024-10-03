@@ -18,7 +18,7 @@ function isNumber(event) {
     return /^[0-9]$/.test(key) || event.ctrlKey || event.altKey || key === 'Backspace' || key === 'Delete' || key === 'Enter' || key === 'Tab';
 }
 
-document.getElementById('fibonacci-input').addEventListener('input', function() {
+document.getElementById('fibonacci-input').addEventListener('input', function () {
     const input = this.value;
     const num = parseInt(input);
 
@@ -55,19 +55,19 @@ function updateResult() {
 
 document.getElementById('string-input').addEventListener('input', updateResult);
 
-// Soma
+// loop
 const values_order = [
     [1, 1, 2, 2, 2, 0, 2, 2, 2],   // Iteração 1
     [2, 2, 3, 3, 3, 2, 5, 5, 5],   // Iteração 2
-    [3 ,3 ,4 ,4 ,4 ,5 ,9 ,9 ,9 ],   // Iteração 3
-    [4 ,4 ,5 ,5 , 5, 9, 14, 14, 14], // Iteração 4
-    [5 ,5 ,6 ,6 ,6 ,14, 20, 20, 20], // Iteração 5
-    [6 ,6 ,7 ,7 ,7 ,20, 27, 27, 27], // Iteração 6
-    [7 ,7 ,8 ,8 ,8 ,27, 35, 35, 35], // Iteração 7
-    [8 ,8 ,9 ,9 ,9 ,35, 44, 44, 44], // Iteração 8
-    [9 ,9 ,10,10,10,44, 54, 54, 54], // Iteração 9
-    [10,10,11,11,11,54, 65, 65, 65], // Iteração 10
-    [11,11,12,12,12,65, 77, 77, 77], // Iteração 11
+    [3, 3, 4, 4, 4, 5, 9, 9, 9],   // Iteração 3
+    [4, 4, 5, 5, 5, 9, 14, 14, 14], // Iteração 4
+    [5, 5, 6, 6, 6, 14, 20, 20, 20], // Iteração 5
+    [6, 6, 7, 7, 7, 20, 27, 27, 27], // Iteração 6
+    [7, 7, 8, 8, 8, 27, 35, 35, 35], // Iteração 7
+    [8, 8, 9, 9, 9, 35, 44, 44, 44], // Iteração 8
+    [9, 9, 10, 10, 10, 44, 54, 54, 54], // Iteração 9
+    [10, 10, 11, 11, 11, 54, 65, 65, 65], // Iteração 10
+    [11, 11, 12, 12, 12, 65, 77, 77, 77], // Iteração 11
 ];
 
 function updateSpans(iterationIndex) {
@@ -128,7 +128,7 @@ function updateSpans(iterationIndex) {
         document.getElementById('order_7').classList.remove('font-semibold');
         document.getElementById('order_8').innerHTML = currentValues[8];
         document.getElementById('order_8').classList.add('font-semibold');
-    }, 5600);   
+    }, 5600);
 }
 
 function resetSpans() {
@@ -150,7 +150,7 @@ function runAllIterations() {
         }
 
         document.getElementById('iteration').innerHTML = i + 1;
-        
+
         updateSpans(i);
 
         setTimeout(() => {
@@ -179,12 +179,12 @@ setTimeout(() => {
 
 // Lógica
 numbers = [
-    [" 9, ..., ..., ...",   " 9, 11, ..., ...",     " 9, 11, 13, ...",      " 9, 11, 13, 15"],
-    [" 128, ..., ..., ...", " 128, 256, ..., ...",  " 128, 256, 512, ...",  " 128, 256, 512, 1024"],
-    [" 49, ..., ..., ...",  " 49, 64, ..., ...",    " 49, 64, 81, ...",     " 49, 64, 81, 100"],
-    [" 100, ..., ..., ...", " 100, 144, ..., ...",  " 100, 144, 196, ...",  " 100, 144, 196, 256"],
-    [" 13, ..., ..., ...",  " 13, 21, ..., ...",    " 13, 21, 34, ...",     " 13, 21, 34, 55"],
-    [" 200, ..., ..., ...", " 200, 201, ..., ...",  " 200, 201, 202, ...",  " 200, 201, 202, 203"],
+    [" 9, ..., ..., ...", " 9, 11, ..., ...", " 9, 11, 13, ...", " 9, 11, 13, 15"],
+    [" 128, ..., ..., ...", " 128, 256, ..., ...", " 128, 256, 512, ...", " 128, 256, 512, 1024"],
+    [" 49, ..., ..., ...", " 49, 64, ..., ...", " 49, 64, 81, ...", " 49, 64, 81, 100"],
+    [" 100, ..., ..., ...", " 100, 144, ..., ...", " 100, 144, 196, ...", " 100, 144, 196, 256"],
+    [" 13, ..., ..., ...", " 13, 21, ..., ...", " 13, 21, 34, ...", " 13, 21, 34, 55"],
+    [" 200, ..., ..., ...", " 200, 201, ..., ...", " 200, 201, 202, ...", " 200, 201, 202, 203"],
 ]
 
 function updateNumberSpans() {
@@ -205,11 +205,9 @@ function updateNumberSpans() {
 
 updateNumberSpans();
 
-
-
 // Rolagem com links
 document.querySelectorAll('.scroll-link').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
         const targetID = this.getAttribute('href');
@@ -217,8 +215,9 @@ document.querySelectorAll('.scroll-link').forEach(anchor => {
 
         if (targetElement) {
             const elementoPos = targetElement.getBoundingClientRect().top + window.scrollY;
+
             window.scrollTo({
-                top: elementoPos - 20,
+                top: elementoPos - 40,
                 behavior: 'smooth'
             });
         }

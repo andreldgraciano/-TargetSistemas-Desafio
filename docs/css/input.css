@@ -7,9 +7,4 @@
         display: inline-block;
         position: relative;
     }
-    
-    .scroll-link:target {
-        top: -20px; /* Ajuste o deslocamento */
-        position: relative;
-    }
 }

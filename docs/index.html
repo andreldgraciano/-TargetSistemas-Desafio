@@ -11,19 +11,16 @@
 </head>
 <body class="relative py-10 lg:pt-10 lg:pb-0">
     <header class="fixed top-0 w-full bg-white flex justify-center lg:justify-between h-10 border-b items-center">
-        <div class="flex flex-col md:flex-row justify-center lg:justify-end md:flex-1 items-center pr-0 lg:pr-4">
-            <!-- <h1 class="text-red-500 flex items-center text-lg font-semibold">Desafio Target</h1> -->
-            <nav>
-                <ul class="flex gap-4 sm:gap-8 md:gap-24 text-stone-400 text-md">
-                    <li class="hover:text-red-500"><a href="#fibonacci" class="scroll-link">Fibonacci</a></li>
-                    <li class="hover:text-green-500"><a href="#string" class="scroll-link">String</a></li>
-                    <li class="hover:text-purple-500"><a href="#soma" class="scroll-link">Soma</a></li>
-                    <li class="hover:text-orange-500"><a href="#logica" class="scroll-link">Lógica</a></li>
-                    <li class="hover:text-blue-500"><a href="#lampada" class="scroll-link">Lâmpada</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="text-white bg-stone-700 w-[360px] xl:w-[550px] pl-8 gap-8 h-full items-center hidden lg:flex">
+        <nav class="w-full">
+            <ul class="flex justify-around text-stone-400 text-xs sm:text-sm md:text-md">
+                <li class="hover:text-red-500"><a href="#fibonacci" class="scroll-link">Fibonacci</a></li>
+                <li class="hover:text-green-500"><a href="#string" class="scroll-link">String</a></li>
+                <li class="hover:text-purple-500"><a href="#loop" class="scroll-link">Laço de Repetição</a></li>
+                <li class="hover:text-orange-500"><a href="#sequencia" class="scroll-link">Sequência</a></li>
+                <li class="hover:text-blue-500"><a href="#logic" class="scroll-link">Raciocínio Lógico</a></li>
+            </ul>
+        </nav>
+        <div class="text-white bg-stone-700 w-[500px] xl:w-[550px] pl-8 gap-8 h-full items-center hidden lg:flex">
             <p>André Luiz Dias Graciano</p>
             <a
                 href="https://www.linkedin.com/in/andreldgraciano/"
@@ -59,7 +56,12 @@
         <section id="fibonacci" class="bg-red-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-red-500">
             <div class="py-2 lg:py-0 bg-red-500 text-white lg:w-[100px] flex justify-center font-semibold">Fibonacci</div>
             <div class="w-full">
-                <h4 class="bg-red-500 text-white px-4 py-2">Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.</h4>
+                <h4 class="bg-red-500 text-white px-4 py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 inline">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
+                    </svg>
+                    Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
+                </h4>
                 <div class="flex flex-col sm:flex-row items-center gap-4 bg-white p-4">
                     <div class="flex flex-col items-center sm:items-start">
                         <label for="fibonacci">Entre com um número:</label>
@@ -75,7 +77,12 @@
         <section id="string" class="bg-green-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-green-500">
             <div class="py-2 lg:py-0 bg-green-500 text-white lg:w-[100px] flex justify-center font-semibold">String</div>
             <div class="w-full">
-                <h4 class="bg-green-500 text-white px-4 py-2">Escreva um programa que verifique, em uma string, a existência da letra 'a', seja maiúscula ou minúscula, além de informar a quantidade de vezes em que ela ocorre.</h4>
+                <h4 class="bg-green-500 text-white px-4 py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 inline">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
+                    </svg>
+                    Escreva um programa que verifique, em uma string, a existência da letra 'a', seja maiúscula ou minúscula, além de informar a quantidade de vezes em que ela ocorre.
+                </h4>
                 <div class="flex flex-col sm:flex-row items-center gap-4 bg-white p-4">
                     <div class="flex flex-col items-center sm:items-start">
                         <label for="string">Entre com uma string:</label>
@@ -87,10 +94,15 @@
             </div>
         </section>
 
-        <section id="soma" class="bg-purple-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-purple-500">
-            <div class="py-2 lg:py-0 bg-purple-500 text-white lg:w-[100px] flex justify-center font-semibold">Soma</div>
+        <section id="loop" class="bg-purple-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-purple-500">
+            <div class="py-2 lg:py-0 bg-purple-500 text-white lg:w-[100px] flex justify-center font-semibold text-center">Laço de Repetição</div>
             <div class="w-full">
-                <h4 class="bg-purple-500 text-white px-4 py-2">Observe o trecho de código abaixo e informe qual será o valor final de SOMA.</h4>
+                <h4 class="bg-purple-500 text-white px-4 py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 inline">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
+                    </svg>
+                    Observe o trecho de código abaixo e informe qual será o valor final de SOMA.
+                </h4>
                 <div class="p-4 flex flex-col items-center sm:items-start gap-2 bg-white">
                     <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
                         <div>
@@ -123,10 +135,15 @@
             </div>
         </section>
 
-        <section id="logica" class="bg-orange-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-orange-500">
-            <div class="py-2 lg:py-0 bg-orange-500 text-white lg:w-[100px] flex justify-center font-semibold">Lógica</div>
+        <section id="sequencia" class="bg-orange-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-orange-500">
+            <div class="py-2 lg:py-0 bg-orange-500 text-white lg:w-[100px] flex justify-center font-semibold">Sequência</div>
             <div class="w-full">
-                <h4 class="bg-orange-500 text-white px-4 py-2">Descubra a lógica e complete o próximo elemento:</h4>
+                <h4 class="bg-orange-500 text-white px-4 py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 inline">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
+                    </svg>
+                    Descubra a lógica e complete o próximo elemento:
+                </h4>
                 <div class="p-4 flex justify-center sm:justify-start bg-white">
                     <div class="w-[330px]">
                         <p>1, 3, 5, 7,<span id="seq_0" class="font-semibold">... , ..., ..., ...</span> </p>
@@ -141,10 +158,15 @@
 
         </section>
 
-        <section id="lampada" class="bg-blue-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-blue-500">
-            <div class="py-2 lg:py-0 bg-blue-500 text-white lg:w-[100px] flex justify-center font-semibold">Lâmpada</div>
+        <section id="logic" class="bg-blue-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-blue-500">
+            <div class="py-2 lg:py-0 bg-blue-500 text-white lg:w-[100px] flex justify-center font-semibold text-center">Raciocínio Lógico</div>
             <div class="w-full">
-                <h4 class="bg-blue-500 text-white px-4 py-2">Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?</h4>
+                <h4 class="bg-blue-500 text-white px-4 py-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 inline">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m15 15 6-6m0 0-6-6m6 6H9a6 6 0 0 0 0 12h3" />
+                    </svg>
+                    Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?
+                </h4>
                 <div class="p-4 flex flex-col gap-4 bg-white">
                     <h2 class="text-lg text-center lg:text-start">Duas possíveis soluçoes:</h2>
                     <div class="flex flex-col lg:flex-row gap-4 items-center lg:items-start lg:justify-start text-sm sm:text-base">
