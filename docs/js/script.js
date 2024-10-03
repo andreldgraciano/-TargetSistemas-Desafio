@@ -57,104 +57,170 @@ document.getElementById('string-input').addEventListener('input', updateResult);
 
 // Soma
 const values_order = [
-    [1, 1, 2, 2, 2, 0, 2, 2, 2],   // Iteração 0 (SOMA = 1)
-    [2, 2, 3, 3, 3, 2, 5, 5, 5],   // Iteração 1 (SOMA = 3)
-    [3, 3, 4, 4, 4, 3, 8, 8, 8],   // Iteração 2 (SOMA = 6)
-    [4, 4, 5, 5, 5, 4, 12, 12, 12], // Iteração 3 (SOMA = 10)
-    [5, 5, 6, 6, 6, 5, 17, 17, 17], // Iteração 4 (SOMA = 15)
-    [6, 6, 7, 7, 7, 6, 23, 23, 23], // Iteração 5 (SOMA = 21)
-    [7, 7, 8, 8, 8, 7, 30, 30, 30], // Iteração 6 (SOMA = 28)
-    [8, 8, 9, 9, 9, 8, 38, 38, 38], // Iteração 7 (SOMA = 36)
-    [9, 9, 10, 10, 10, 9, 47, 47, 47], // Iteração 8 (SOMA = 45)
-    [10, 10, 11, 11, 11, 10, 57, 57, 57], // Iteração 9 (SOMA = 55)
-    [11, 11, 12, 12, 12, 11, 68, 68, 68], // Iteração 10 (SOMA = 66)
-    [12, 12, 13, 13, 13, 12, 77, 77, 77]  // Iteração 11 (SOMA = 77)
+    [1, 1, 2, 2, 2, 0, 2, 2, 2],   // Iteração 1
+    [2, 2, 3, 3, 3, 2, 5, 5, 5],   // Iteração 2
+    [3 ,3 ,4 ,4 ,4 ,5 ,9 ,9 ,9 ],   // Iteração 3
+    [4 ,4 ,5 ,5 , 5, 9, 14, 14, 14], // Iteração 4
+    [5 ,5 ,6 ,6 ,6 ,14, 20, 20, 20], // Iteração 5
+    [6 ,6 ,7 ,7 ,7 ,20, 27, 27, 27], // Iteração 6
+    [7 ,7 ,8 ,8 ,8 ,27, 35, 35, 35], // Iteração 7
+    [8 ,8 ,9 ,9 ,9 ,35, 44, 44, 44], // Iteração 8
+    [9 ,9 ,10,10,10,44, 54, 54, 54], // Iteração 9
+    [10,10,11,11,11,54, 65, 65, 65], // Iteração 10
+    [11,11,12,12,12,65, 77, 77, 77], // Iteração 11
 ];
 
-// Função para atualizar os spans
 function updateSpans(iterationIndex) {
-    // Verifica se o índice é válido
+
     if (iterationIndex < 0 || iterationIndex >= values_order.length) {
         console.error('Índice de iteração inválido');
         return;
     }
 
-    // Obtém o array da iteração atual
     const currentValues = values_order[iterationIndex];
 
-    // Atualiza os spans de acordo com os valores do array
-    document.getElementById('order_0').innerHTML = currentValues[0]; // K antes da iteração
+    document.getElementById('order_0').innerHTML = currentValues[0];
+    document.getElementById('order_0').classList.add('font-semibold');
 
-    // Define um tempo para cada atualização subsequente
     setTimeout(() => {
-        document.getElementById('order_1').innerHTML = currentValues[1]; // K após o incremento
+        document.getElementById('order_0').classList.remove('font-semibold');
+        document.getElementById('order_1').innerHTML = currentValues[1];
+        document.getElementById('order_1').classList.add('font-semibold');
     }, 700);
 
     setTimeout(() => {
-        document.getElementById('order_2').innerHTML = currentValues[2]; // K após o incremento
+        document.getElementById('order_1').classList.remove('font-semibold');
+        document.getElementById('order_2').innerHTML = currentValues[2];
+        document.getElementById('order_2').classList.add('font-semibold');
     }, 1400);
 
     setTimeout(() => {
-        document.getElementById('order_3').innerHTML = currentValues[3]; // K que é incrementado
+        document.getElementById('order_2').classList.remove('font-semibold');
+        document.getElementById('order_3').innerHTML = currentValues[3];
+        document.getElementById('order_3').classList.add('font-semibold');
     }, 2100);
 
     setTimeout(() => {
-        document.getElementById('order_4').innerHTML = currentValues[4]; // SOMA antes da iteração
+        document.getElementById('order_3').classList.remove('font-semibold');
+        document.getElementById('order_4').innerHTML = currentValues[4];
+        document.getElementById('order_4').classList.add('font-semibold');
     }, 2800);
 
     setTimeout(() => {
-        document.getElementById('order_5').innerHTML = currentValues[5]; // SOMA após adicionar K
+        document.getElementById('order_4').classList.remove('font-semibold');
+        document.getElementById('order_5').innerHTML = currentValues[5];
+        document.getElementById('order_5').classList.add('font-semibold');
     }, 3500);
 
     setTimeout(() => {
-        document.getElementById('order_6').innerHTML = currentValues[6]; // SOMA após adicionar K
+        document.getElementById('order_5').classList.remove('font-semibold');
+        document.getElementById('order_6').innerHTML = currentValues[6];
+        document.getElementById('order_6').classList.add('font-semibold');
     }, 4200);
 
     setTimeout(() => {
-        document.getElementById('order_7').innerHTML = currentValues[7]; // SOMA após adicionar K
+        document.getElementById('order_6').classList.remove('font-semibold');
+        document.getElementById('order_7').innerHTML = currentValues[7];
+        document.getElementById('order_7').classList.add('font-semibold');
     }, 4900);
 
     setTimeout(() => {
-        document.getElementById('order_8').innerHTML = currentValues[8]; // Contagem de iterações
-    }, 5600);
+        document.getElementById('order_7').classList.remove('font-semibold');
+        document.getElementById('order_8').innerHTML = currentValues[8];
+        document.getElementById('order_8').classList.add('font-semibold');
+    }, 5600);   
 }
 
-// Função para resetar os spans entre as iterações
 function resetSpans() {
+    document.getElementById('order_8').classList.remove('font-semibold');
     document.getElementById('order_1').innerHTML = "K";
     document.getElementById('order_2').innerHTML = "K";
     document.getElementById('order_4').innerHTML = "K";
     document.getElementById('order_5').innerHTML = "SOMA";
     document.getElementById('order_6').innerHTML = "SOMA";
-    document.getElementById('order_7').innerHTML = "SOMA";
+    document.getElementById('order_8').innerHTML = "SOMA";
 }
 
-// Função para rodar todas as iterações com um intervalo
 function runAllIterations() {
     let i = 0;
 
-    // Função interna para executar as iterações
     const runIteration = () => {
         if (i >= values_order.length) {
-            i = 0; // Reinicia as iterações
+            i = 0;
         }
 
+        document.getElementById('iteration').innerHTML = i + 1;
+        
         updateSpans(i);
 
-        // Espera 5.6 segundos para finalizar a iteração e então reseta os spans
         setTimeout(() => {
-            resetSpans();
-            // Espera 3 segundos após o reset antes de iniciar a próxima iteração
+            setTimeout(() => {
+                resetSpans();
+            }, 1000);
+
             setTimeout(() => {
                 i++;
                 runIteration();
-            }, 3000); // Pausa de 3 segundos entre iterações
-        }, 5600); // Tempo total das animações (5.6 segundos)
+            }, 2000);
+        }, 5600);
     };
 
-    // Inicia a primeira iteração
-    runIteration();
+    setTimeout(() => {
+        runIteration();
+    }, 2000);
+
+    document.getElementById('order_7').innerHTML = 0;
+    document.getElementById('order_3').innerHTML = 1;
 }
 
-// Inicia a execução de todas as iterações
-runAllIterations();
+setTimeout(() => {
+    runAllIterations();
+}, 1000);
+
+// Lógica
+numbers = [
+    [" 9, ..., ..., ...", " 9, 11, ..., ...", " 9, 11, 13, ...", " 9, 11, 13, 15"],
+    [" 128, ..., ..., ...", " 128, 256, ..., ...", " 128, 256, 1024, ...", " 128, 256, 1024, 2048"],
+    [" 49, ..., ..., ...", " 49, 64, ..., ...", " 49, 64, 80, ...", " 49, 64, 80, 97"],
+    [" 100, ..., ..., ...", " 100, 144, ..., ...", " 100, 144, 196, ...", " 100, 144, 196, 256"],
+    [" 13, ..., ..., ...", " 13, 21, ..., ...", " 13, 21, 34, ...", " 13, 21, 34, 55"],
+    [" 200, ..., ..., ...", " 200, 201, ..., ...", " 200, 201, 202, ...", " 200, 201, 202, 203"],
+]
+
+function updateNumberSpans() {
+    for (let x = 0; x < numbers.length; x++) {
+        let numberIndex = 0;
+        setInterval(() => {
+            const span = document.getElementById(`seq_${x}`);
+            if (span) {
+                span.innerHTML = numbers[x][numberIndex];
+                numberIndex++;
+                if (numberIndex >= numbers[x].length) {
+                    numberIndex = 0;
+                }
+            }
+        }, 1000);
+    }
+}
+
+updateNumberSpans();
+
+
+
+// Rolagem com links
+document.querySelectorAll('.scroll-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetID = this.getAttribute('href');
+        const targetElement = document.querySelector(targetID);
+
+        if (targetElement) {
+            const elementoPos = targetElement.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: elementoPos - 20,
+                behavior: 'smooth'
+            });
+        }
+    });
+});

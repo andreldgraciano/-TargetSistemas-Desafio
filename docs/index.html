@@ -8,43 +8,55 @@
     <!-- npx tailwindcss -i ./docs/css/input.css -o ./docs/css/output.css --watch -->
     <!-- npx tailwindcss -i ./docs/css/input.css -o ./docs/css/output.css --minify -->
 </head>
-<body>
-    <header class="flex justify-between h-12 border-b items-center">
-        <div class="flex justify-around flex-1">
-            <h1 class="text-red-500 flex items-center text-lg font-semibold">Desafio Target</h1>
+<body class="relative py-10">
+    <header class="fixed top-0 w-full bg-white flex justify-center lg:justify-between h-10 border-b items-center">
+        <div class="flex flex-col md:flex-row justify-center lg:justify-end md:flex-1 items-center pr-0 lg:pr-4">
+            <!-- <h1 class="text-red-500 flex items-center text-lg font-semibold">Desafio Target</h1> -->
             <nav>
-                <ul class="flex gap-5 text-stone-500 text-lg">
-                    <li class="hover:text-red-500 hover:scale-110"><a href="#fibonacci">Fibonacci</a></li>
-                    <li class="hover:text-red-500 hover:scale-110"><a href="#string">String</a></li>
-                    <li class="hover:text-red-500 hover:scale-110"><a href="#soma">SOMA?</a></li>
-                    <li class="hover:text-red-500 hover:scale-110"><a href="#logica">Lógica</a></li>
-                    <li class="hover:text-red-500 hover:scale-110"><a href="#lampada">Lâmpada</a></li>
+                <ul class="flex gap-4 sm:gap-8 md:gap-24 text-stone-400 text-md">
+                    <li class="hover:text-red-500"><a href="#fibonacci" class="scroll-link">Fibonacci</a></li>
+                    <li class="hover:text-red-500"><a href="#string" class="scroll-link">String</a></li>
+                    <li class="hover:text-red-500"><a href="#soma" class="scroll-link">Soma</a></li>
+                    <li class="hover:text-red-500"><a href="#logica" class="scroll-link">Lógica</a></li>
+                    <li class="hover:text-red-500"><a href="#lampada" class="scroll-link">Lâmpada</a></li>
                 </ul>
             </nav>
         </div>
-        <a
-            href="https://www.linkedin.com/in/andreldgraciano/"
-            target="_blank"
-            class="text-white bg-stone-800 px-12 h-full hover:text-stone-400 cursor-pointer flex items-center">
-            André Luiz Dias Graciano
-            <svg fill="#ffff" height="30px" width="30px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+        <div class="text-white bg-stone-700 w-[360px] xl:w-[550px] pl-8 gap-8 h-full items-center hidden lg:flex">
+            <p>André Luiz Dias Graciano</p>
+            <a
+                href="https://www.linkedin.com/in/andreldgraciano/"
+                target="_blank"
+                class="cursor-pointer">
+                <svg fill="#ffff" height="30px" width="30px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                 viewBox="0 0 32 32" xml:space="preserve">
                 <path d="M23,0H9C4,0,0,4,0,9v14c0,5,4,9,9,9h14c5,0,9-4,9-9V9C32,4,28,0,23,0z M12,25c0,0.6-0.4,1-1,1H7c-0.6,0-1-0.4-1-1V13
                 c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1V25z M9,11c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S10.7,11,9,11z M26,25c0,0.6-0.4,1-1,1h-3
                 c-0.6,0-1-0.4-1-1v-3.5v-1v-2c0-0.8-0.7-1.5-1.5-1.5S18,17.7,18,18.5v2v1V25c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V13
                 c0-0.6,0.4-1,1-1h4c0.3,0,0.5,0.1,0.7,0.3c0.6-0.2,1.2-0.3,1.8-0.3c3,0,5.5,2.5,5.5,5.5V25z"/>
             </svg>
-        </a>
+            </a>
+            <a 
+                href="https://github.com/andreldgraciano"
+                target="_blank"
+                class="cursor-pointer">
+                <svg fill="#fff" width="30px" height="30px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                        <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#000000">
+                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+        </div>
     </header>
 
-    <main>
-        <!--
-            <aside>
-            </aside>
-        -->
+    <main class="space-y-4">
 
-        <section id="fibonacci" class="p-4 flex items-center gap-4 border">
-            <div class="flex flex-col">
+        <section id="fibonacci" class="p-4 flex flex-col sm:flex-row items-center gap-4">
+            <div class="flex flex-col items-center sm:items-start">
                 <label for="fibonacci">Entre com um número:</label>
                 <input type="text" id="fibonacci-input" name="fibonacci" autocomplete="off" type="number" min="1" onkeypress="return isNumber(event)" placeholder="Insira um número" class="w-60 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-stone-500 hover:border-stone-300 shadow-sm focus:shadow focus:ring-stone-500">
             </div>
@@ -52,8 +64,8 @@
             <div id="result-fibonacci">Esperando um número...</div>
         </section>
 
-        <section id="string" class="p-4 flex items-center gap-4 border">
-            <div class="flex flex-col">
+        <section id="string" class="p-4 flex flex-col sm:flex-row items-center gap-4">
+            <div class="flex flex-col items-center sm:items-start">
                 <label for="string">Entre com uma string:</label>
                 <input type="text" id="string-input" name="string" autocomplete="off"  type="text" placeholder="Insira uma string" class="w-60 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-stone-500 hover:border-stone-300 shadow-sm focus:shadow focus:ring-stone-500">
             </div>
@@ -61,74 +73,118 @@
             <div id="result-string">Esperando uma string...</div>
         </section>
 
-        <section id="soma" class="p-4 flex gap-10 border">
-            <div>
-                <blockquote>
-                    <pre>int INDICE = 12, SOMA = 0, K = 1;</pre>
-                    <pre>enquanto K < INDICE faça{</pre>
-                    <pre>   K = K + 1;</pre>
-                    <pre>   SOMA = SOMA + K;</pre>
-                    <pre>}</pre>
-                    <pre>imprimir(SOMA)</pre>
-                </blockquote>
-            </div>
-
-            <div>
-                <!-- <blockquote></blockquote>
-                    <pre>int INDICE = 12, SOMA = <span id="order_8">0</span>, K = <span id="order_3">1</span>;</pre>
-                    <pre>enquanto <span id="order_0">K</span> < 12 faça{</pre>
-                    <pre>   <span id="order_2">K</span> = <span id="order_1">K</span> + 1;</pre>
-                    <pre>   <span id="order_6">SOMA</span> = <span id="order_5">SOMA</span> + <span id="order_4">K</span>;</pre>
-                    <pre>}</pre>
-                    <pre>imprimir(<span id="order_7">SOMA</span>)</pre>
-                </blockquote> -->
-                Demonstração de iteração do código em construção...
-            </div>
+        <section id="soma" class="p-4 flex flex-col items-center sm:items-start gap-4">
             <p class="text-lg font-semibold">
                 SOMA FINAL = 77
             </p>
-        </section>
-
-        <section id="logica" class="p-4 border">
-            <p>1, 3, 5, 7,<span class="font-semibold"> 9, 11, 13, 15</span> </p>
-            <p>2, 4, 8, 16, 32, 64,<span class="font-semibold"> 128, 256, 1024, 2048</span> </p>
-            <p>0, 1, 4, 9, 16, 25, 36,<span class="font-semibold"> 49, 64, 80, 97</span> </p>
-            <p>4, 16, 36, 64,<span class="font-semibold">100, 144, 196, 256</span> </p>
-            <p>1, 1, 2, 3, 5, 8,<span class="font-semibold"> 13, 21, 34, 55</span> </p>
-            <p>2, 10, 12, 16, 17, 18, 19,<span class="font-semibold"> 200, 201, 202, 203</span> </p>
-        </section>
-
-        <section id="lampada" class="p-4 flex flex-col gap-4 border">
-            <h2 class="text-lg">Duas possíveis soluçoes:</h2>
-            <pre>Solução com apenas uma ida:</pre>
-            <div>
-                <pre>   Acenderia o interrupitor 1 e esperaria cerca de 20 minutos, tempo suficiente para a lâmpada aquecer.</pre>
-                <pre>   Desligaria o interrupitor 1 a acenderia o 2.</pre>
-                <pre>   Correria até a sala de lâmpadas e:</pre>
-                <pre>       A lâmpada apagada e quente seria o interruptor 1.</pre>
-                <pre>       A lâmpada acesa seria o interrupitor 2.</pre>
-                <pre>       A lâmpada apagada e fria seria o interrupitor 3.</pre>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+                <div class="">
+                    <h3 class="text-lg">Código</h3>
+                    <blockquote>
+                        <pre>int INDICE = 12, SOMA = 0, K = 1;</pre>
+                        <pre>enquanto K < INDICE faça{</pre>
+                        <pre>   K = K + 1;</pre>
+                        <pre>   SOMA = SOMA + K;</pre>
+                        <pre>}</pre>
+                        <pre>imprimir(SOMA)</pre>
+                    </blockquote>
+                </div>
+                <div>
+                    <h3 class="text-lg">Demonstração de Iteração <span id="iteration" class="font-semibold"></span></h3>
+                    <blockquote></blockquote>
+                        <pre>int INDICE = 12, SOMA = <span id="order_7">0</span>, K = <span id="order_3">1</span>;</pre>
+                        <pre>enquanto <span id="order_0">K</span> < 12 faça{</pre>
+                        <pre>   <span id="order_2">K</span> = <span id="order_1">K</span> + 1;</pre>
+                        <pre>   <span id="order_6">SOMA</span> = <span id="order_5">SOMA</span> + <span id="order_4">K</span>;</pre>
+                        <pre>}</pre>
+                        <pre>imprimir(<span id="order_8">SOMA</span>)</pre>
+                    </blockquote>
+                </div>
             </div>
+        </section>
 
-            <pre>Solução com duas idas:</pre>
-            <div>
-                <pre>   Acenderia o interrupitor 1 e 2.</pre>
-                <pre>   Iria para a sala de lâmpadas. *Primeira ida*</pre>
-                <pre>   Verificar quais lampadas estão acesas.</pre>
-                <pre>   Voltaria para sala dos interrupitores.</pre>
-                <pre>   Desligaria o 2 e acenderia o 3.</pre>
-                <pre>   Iria novamente para a sala de lâmpadas. *Segunda ida*</pre>
-                <pre>   Verificar os estados das lâmpadas e:</pre>
-                <pre>       A que continuou acesa nas duas idas é o interrupitor 1.</pre>
-                <pre>       A que estava acesa na primeira ida e agora está apagada é o interrupitor 2.</pre>
-                <pre>       ( A que está acesa e não é mesma que estava acesa na primeira ida && consequentemente a que estava apagada na primeira ida ) é o interrupitor 3.</pre>
+        <section id="logica" class="p-4 flex justify-center sm:justify-start">
+            <div class="w-[330px]">
+                <p>1, 3, 5, 7,<span id="seq_0" class="font-semibold">... , ..., ..., ...</span> </p>
+                <p>2, 4, 8, 16, 32, 64,<span id="seq_1" class="font-semibold">... , ..., ..., ...</span> </p>
+                <p>0, 1, 4, 9, 16, 25, 36,<span id="seq_2" class="font-semibold">... , ..., ..., ...</span> </p>
+                <p>4, 16, 36, 64,<span id="seq_3" class="font-semibold">... , ..., ..., ...</span></p>
+                <p>1, 1, 2, 3, 5, 8,<span id="seq_4" class="font-semibold">... , ..., ..., ...</span> </p>
+                <p>2, 10, 12, 16, 17, 18, 19,<span id="seq_5" class="font-semibold">... , ..., ..., ...</span> </p>
+            </div>
+        </section>
+
+        <section id="lampada" class="p-4 flex flex-col gap-4">
+            <h2 class="text-lg text-center lg:text-start">Duas possíveis soluçoes:</h2>
+            <div class="flex flex-col lg:flex-row gap-4 items-center lg:items-start lg:justify-start text-sm sm:text-base">
+                <div class="max-w-[480px] bg-white rounded-xl">
+                    <h3 class="py-2 pl-4 bg-blue-900 text-white rounded-t-xl">Solução com apenas <strong>uma ida</strong>:</h3>
+                    <ul class="list-decimal list-inside py-2 pl-4 bg-blue-100">
+                        <li class="mb-2">Acenderia o interruptor 1 e esperaria cerca de 20 minutos, tempo suficiente para a lâmpada aquecer.</li>
+                        <li class="mb-2">Desligaria o interruptor 1 e acenderia o 2.</li>
+                        <li class="mb-2">Correria até a sala de lâmpadas e:</li>
+                    </ul>
+                    <ul class="list-decimal list-inside py-2 pl-4 shadow-2xl rounded-b-xl">
+                        <li class="font-semibold text-blue-600 list-disc">A lâmpada apagada e quente seria o interruptor 1.</li>
+                        <li class="font-semibold text-blue-600 list-disc">A lâmpada acesa seria o interruptor 2.</li>
+                        <li class="font-semibold text-blue-600 list-disc">A lâmpada apagada e fria seria o interruptor 3.</li>
+                    </ul> 
+                </div>             
+                <div class="max-w-[480px] bg-white rounded-xl">
+                    <h3 class="py-2 pl-4 bg-blue-900 text-white rounded-t-xl">Solução com <strong>duas idas</strong>:</h3>
+                    <ul class="list-decimal list-inside py-2 pl-4 bg-blue-100">
+                        <li class="mb-2">Acenderia o interruptor 1 e 2.</li>
+                        <li class="mb-2">Iria para a sala de lâmpadas. <span class="italic">*Primeira ida*</span></li>
+                        <li class="mb-2">Verificar quais lâmpadas estão acesas.</li>
+                        <li class="mb-2">Voltaria para sala dos interruptores.</li>
+                        <li class="mb-2">Desligaria o 2 e acenderia o 3.</li>
+                        <li class="mb-2">Iria novamente para a sala de lâmpadas. <span class="italic">*Segunda ida*</span></li>
+                        <li class="mb-2">Verificar os estados das lâmpadas e:</li>
+                    </ul>
+                    <ul class="list-decimal list-inside py-2 pl-4 shadow-2xl rounded-b-xl">
+                          <li class="font-semibold text-blue-600 list-disc">A que continuou acesa nas duas idas é o interruptor 1.</li>
+                          <li class="font-semibold text-blue-600 list-disc">A que estava acesa na primeira ida e agora está apagada é o interruptor 2.</li>
+                          <li class="font-semibold text-blue-600 list-disc">( A que está acesa e não é a mesma que estava acesa na primeira ida e consequentemente a que estava apagada na primeira ida ) é o interruptor 3.</li>
+                      </ul>
+                </div> 
             </div>
         </section>
     </main>
 
-    <!-- <footer>
-
-    </footer> -->
+    <footer class="fixed lg:hidden bottom-0 w-full bg-stone-800 h-10 flex items-center">
+        <nav class="flex justify-evenly items-center w-full">
+            <div class="text-white">
+                <p class="hidden sm:block">André Luiz Dias Graciano</p>
+                <p class="sm:hidden">André Dias</p>
+            </div>
+            <a
+                href="https://www.linkedin.com/in/andreldgraciano/"
+                target="_blank"
+                class="cursor-pointer">
+                <svg fill="#fff" height="30px" width="30px" version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                    viewBox="0 0 32 32" xml:space="preserve">
+                    <path d="M23,0H9C4,0,0,4,0,9v14c0,5,4,9,9,9h14c5,0,9-4,9-9V9C32,4,28,0,23,0z M12,25c0,0.6-0.4,1-1,1H7c-0.6,0-1-0.4-1-1V13
+                    c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1V25z M9,11c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S10.7,11,9,11z M26,25c0,0.6-0.4,1-1,1h-3
+                    c-0.6,0-1-0.4-1-1v-3.5v-1v-2c0-0.8-0.7-1.5-1.5-1.5S18,17.7,18,18.5v2v1V25c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V13
+                    c0-0.6,0.4-1,1-1h4c0.3,0,0.5,0.1,0.7,0.3c0.6-0.2,1.2-0.3,1.8-0.3c3,0,5.5,2.5,5.5,5.5V25z"/>
+                </svg>
+            </a>
+            <a 
+                href="https://github.com/andreldgraciano"
+                target="_blank"
+                class="cursor-pointer">
+                <svg fill="#fff" width="30px" height="30px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                        <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#000000">
+                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+        </nav>
+    </footer>
 
     <script src="./js/script.js"></script>
 </body>

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .scroll-link {
+        display: inline-block;
+        position: relative;
+    }
+    
+    .scroll-link:target {
+        top: -20px; /* Ajuste o deslocamento */
+        position: relative;
+    }
+}
