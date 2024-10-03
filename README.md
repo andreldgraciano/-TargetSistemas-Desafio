@@ -56,4 +56,4 @@ Você está em uma sala com três interruptores, cada um conectado a uma lâmpad
 
 Clique em `Play` no vídeo abaixo para ver como o layout da aplicação se adapta de forma responsiva.
 
-<p align="center"><img src="docs/images/targetsistemas.gif" width="600" alt="Layout Responsivo"></p>
+<p align="center"><img src="docs/images/targetsistemas.mp4" width="600" alt="Layout Responsivo"></p>
