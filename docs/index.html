@@ -58,110 +58,127 @@
 
         <section id="fibonacci" class="bg-red-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-red-500">
             <div class="py-2 lg:py-0 bg-red-500 text-white lg:w-[100px] flex justify-center font-semibold">Fibonacci</div>
-            <div class="flex flex-col sm:flex-row items-center gap-4 bg-white p-4">
-                <div class="flex flex-col items-center sm:items-start">
-                    <label for="fibonacci">Entre com um número:</label>
-                    <input type="text" id="fibonacci-input" name="fibonacci" autocomplete="off" type="number" min="1" onkeypress="return isNumber(event)" placeholder="Insira um número" class="w-60 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-stone-500 hover:border-stone-300 shadow-sm focus:shadow focus:ring-stone-500">
+            <div class="w-full">
+                <h4 class="bg-red-500 text-white px-4 py-2">Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.</h4>
+                <div class="flex flex-col sm:flex-row items-center gap-4 bg-white p-4">
+                    <div class="flex flex-col items-center sm:items-start">
+                        <label for="fibonacci">Entre com um número:</label>
+                        <input type="text" id="fibonacci-input" name="fibonacci" autocomplete="off" type="number" min="1" onkeypress="return isNumber(event)" placeholder="Insira um número" class="w-60 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-stone-500 hover:border-stone-300 shadow-sm focus:shadow focus:ring-stone-500">
+                    </div>
+        
+                    <div id="result-fibonacci">Esperando um número...</div>
                 </div>
-    
-                <div id="result-fibonacci">Esperando um número...</div>
             </div>
+
         </section>
 
         <section id="string" class="bg-green-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-green-500">
             <div class="py-2 lg:py-0 bg-green-500 text-white lg:w-[100px] flex justify-center font-semibold">String</div>
-            <div class="flex flex-col sm:flex-row items-center gap-4 bg-white p-4">
-                <div class="flex flex-col items-center sm:items-start">
-                    <label for="string">Entre com uma string:</label>
-                    <input type="text" id="string-input" name="string" autocomplete="off"  type="text" placeholder="Insira uma string" class="w-60 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-stone-500 hover:border-stone-300 shadow-sm focus:shadow focus:ring-stone-500">
+            <div class="w-full">
+                <h4 class="bg-green-500 text-white px-4 py-2">Escreva um programa que verifique, em uma string, a existência da letra 'a', seja maiúscula ou minúscula, além de informar a quantidade de vezes em que ela ocorre.</h4>
+                <div class="flex flex-col sm:flex-row items-center gap-4 bg-white p-4">
+                    <div class="flex flex-col items-center sm:items-start">
+                        <label for="string">Entre com uma string:</label>
+                        <input type="text" id="string-input" name="string" autocomplete="off"  type="text" placeholder="Insira uma string" class="w-60 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-stone-500 hover:border-stone-300 shadow-sm focus:shadow focus:ring-stone-500">
+                    </div>
+        
+                    <div id="result-string">Esperando uma string...</div>
                 </div>
-    
-                <div id="result-string">Esperando uma string...</div>
             </div>
         </section>
 
         <section id="soma" class="bg-purple-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-purple-500">
             <div class="py-2 lg:py-0 bg-purple-500 text-white lg:w-[100px] flex justify-center font-semibold">Soma</div>
-            <div class="p-4 flex flex-col items-center sm:items-start gap-2 bg-white">
-                <p class="text-lg font-semibold">
-                    SOMA FINAL = 77
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
-                    <div>
-                        <h3 class="text-lg">Código</h3>
-                        <blockquote>
-                            <pre>int INDICE = 12, SOMA = 0, K = 1;</pre>
-                            <pre>enquanto K < INDICE faça{</pre>
-                            <pre>   K = K + 1;</pre>
-                            <pre>   SOMA = SOMA + K;</pre>
-                            <pre>}</pre>
-                            <pre>imprimir(SOMA)</pre>
-                        </blockquote>
-                    </div>
-                    <div>
-                        <h3 class="text-lg">Demonstração de Iteração <span id="iteration" class="font-semibold"></span></h3>
-                        <blockquote></blockquote>
+            <div class="w-full">
+                <h4 class="bg-purple-500 text-white px-4 py-2">Observe o trecho de código abaixo e informe qual será o valor final de SOMA.</h4>
+                <div class="p-4 flex flex-col items-center sm:items-start gap-2 bg-white">
+                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+                        <div>
+                            <h3 class="text-lg">Código</h3>
+                            <blockquote>
+                                <pre>int INDICE = 12, SOMA = 0, K = 1;</pre>
+                                <pre>enquanto K < INDICE faça{</pre>
+                                <pre>   K = K + 1;</pre>
+                                <pre>   SOMA = SOMA + K;</pre>
+                                <pre>}</pre>
+                                <pre>imprimir(SOMA)</pre>
+                            </blockquote>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Demonstração de Iteração <span id="iteration" class="font-semibold text-purple-500"></span></h3>
+                            <blockquote></blockquote>
                             <pre>int INDICE = 12, SOMA = <span id="order_7">0</span>, K = <span id="order_3">1</span>;</pre>
                             <pre>enquanto <span id="order_0">K</span> < 12 faça{</pre>
-                            <pre>   <span id="order_2">K</span> = <span id="order_1">K</span> + 1;</pre>
-                            <pre>   <span id="order_6">SOMA</span> = <span id="order_5">SOMA</span> + <span id="order_4">K</span>;</pre>
-                            <pre>}</pre>
-                            <pre>imprimir(<span id="order_8">SOMA</span>)</pre>
-                        </blockquote>
+                                <pre>   <span id="order_2">K</span> = <span id="order_1">K</span> + 1;</pre>
+                                <pre>   <span id="order_6">SOMA</span> = <span id="order_5">SOMA</span> + <span id="order_4">K</span>;</pre>
+                                <pre>}</pre>
+                                <pre>imprimir(<span id="order_8">SOMA</span>)</pre>
+                            </blockquote>
+                        </div>
                     </div>
+                    <p class="text-lg font-semibold">
+                        SOMA FINAL = 77
+                    </p>
                 </div>
             </div>
         </section>
 
         <section id="logica" class="bg-orange-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-orange-500">
             <div class="py-2 lg:py-0 bg-orange-500 text-white lg:w-[100px] flex justify-center font-semibold">Lógica</div>
-            <div class="p-4 flex justify-center sm:justify-start bg-white">
-                <div class="w-[330px]">
-                    <p>1, 3, 5, 7,<span id="seq_0" class="font-semibold">... , ..., ..., ...</span> </p>
-                    <p>2, 4, 8, 16, 32, 64,<span id="seq_1" class="font-semibold">... , ..., ..., ...</span> </p>
-                    <p>0, 1, 4, 9, 16, 25, 36,<span id="seq_2" class="font-semibold">... , ..., ..., ...</span> </p>
-                    <p>4, 16, 36, 64,<span id="seq_3" class="font-semibold">... , ..., ..., ...</span></p>
-                    <p>1, 1, 2, 3, 5, 8,<span id="seq_4" class="font-semibold">... , ..., ..., ...</span> </p>
-                    <p>2, 10, 12, 16, 17, 18, 19,<span id="seq_5" class="font-semibold">... , ..., ..., ...</span> </p>
+            <div class="w-full">
+                <h4 class="bg-orange-500 text-white px-4 py-2">Descubra a lógica e complete o próximo elemento:</h4>
+                <div class="p-4 flex justify-center sm:justify-start bg-white">
+                    <div class="w-[330px]">
+                        <p>1, 3, 5, 7,<span id="seq_0" class="font-semibold">... , ..., ..., ...</span> </p>
+                        <p>2, 4, 8, 16, 32, 64,<span id="seq_1" class="font-semibold">... , ..., ..., ...</span> </p>
+                        <p>0, 1, 4, 9, 16, 25, 36,<span id="seq_2" class="font-semibold">... , ..., ..., ...</span> </p>
+                        <p>4, 16, 36, 64,<span id="seq_3" class="font-semibold">... , ..., ..., ...</span></p>
+                        <p>1, 1, 2, 3, 5, 8,<span id="seq_4" class="font-semibold">... , ..., ..., ...</span> </p>
+                        <p>2, 10, 12, 16, 17, 18, 19,<span id="seq_5" class="font-semibold">... , ..., ..., ...</span> </p>
+                    </div>
                 </div>
             </div>
+
         </section>
 
         <section id="lampada" class="bg-blue-500 lg:bg-white flex flex-col lg:flex-row lg:border-b-2 lg:border-b-blue-500">
             <div class="py-2 lg:py-0 bg-blue-500 text-white lg:w-[100px] flex justify-center font-semibold">Lâmpada</div>
-            <div class="p-4 flex flex-col gap-4 bg-white">
-                <h2 class="text-lg text-center lg:text-start">Duas possíveis soluçoes:</h2>
-                <div class="flex flex-col lg:flex-row gap-4 items-center lg:items-start lg:justify-start text-sm sm:text-base">
-                    <div class="max-w-[480px] bg-white rounded-xl">
-                        <h3 class="py-2 px-4 bg-blue-500 text-white rounded-t-xl">Solução com apenas <strong>uma ida</strong>:</h3>
-                        <ul class="list-decimal list-inside py-2 px-4 bg-blue-100">
-                            <li class="mb-2 text-blue-900">Acenderia o interruptor 1 e esperaria cerca de 20 minutos, tempo suficiente para a lâmpada aquecer.</li>
-                            <li class="mb-2 text-blue-900">Desligaria o interruptor 1 e acenderia o 2.</li>
-                            <li class="mb-2 text-blue-900">Correria até a sala de lâmpadas e:</li>
-                        </ul>
-                        <ul class="list-decimal bg-blue-500 list-inside py-2 px-4 rounded-b-xl">
-                            <li class="font-semibold text-white list-disc">A lâmpada apagada e quente seria o interruptor 1.</li>
-                            <li class="font-semibold text-white list-disc">A lâmpada acesa seria o interruptor 2.</li>
-                            <li class="font-semibold text-white list-disc">A lâmpada apagada e fria seria o interruptor 3.</li>
-                        </ul> 
-                    </div>             
-                    <div class="max-w-[480px] bg-white rounded-xl">
-                        <h3 class="py-2 px-4 bg-blue-500 text-white rounded-t-xl">Solução com <strong>duas idas</strong>:</h3>
-                        <ul class="list-decimal list-inside py-2 px-4 bg-blue-100">
-                            <li class="mb-2 text-blue-900">Acenderia o interruptor 1 e 2.</li>
-                            <li class="mb-2 text-blue-900">Iria para a sala de lâmpadas. <span class="italic">*Primeira ida*</span></li>
-                            <li class="mb-2 text-blue-900">Verificar quais lâmpadas estão acesas.</li>
-                            <li class="mb-2 text-blue-900">Voltaria para sala dos interruptores.</li>
-                            <li class="mb-2 text-blue-900">Desligaria o 2 e acenderia o 3.</li>
-                            <li class="mb-2 text-blue-900">Iria novamente para a sala de lâmpadas. <span class="italic">*Segunda ida*</span></li>
-                            <li class="mb-2 text-blue-900">Verificar os estados das lâmpadas e:</li>
-                        </ul>
-                        <ul class="list-decimal bg-blue-500 list-inside py-2 px-4 rounded-b-xl">
-                              <li class="font-semibold text-white list-disc">A que continuou acesa nas duas idas é o interruptor 1.</li>
-                              <li class="font-semibold text-white list-disc">A que estava acesa na primeira ida e agora está apagada é o interruptor 2.</li>
-                              <li class="font-semibold text-white list-disc">( A que está acesa e não é a mesma que estava acesa na primeira ida e consequentemente a que estava apagada na primeira ida ) é o interruptor 3.</li>
-                          </ul>
-                    </div> 
+            <div class="w-full">
+                <h4 class="bg-blue-500 text-white px-4 py-2">Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em salas diferentes. Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. Seu objetivo é descobrir qual interruptor controla qual lâmpada. Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?</h4>
+                <div class="p-4 flex flex-col gap-4 bg-white">
+                    <h2 class="text-lg text-center lg:text-start">Duas possíveis soluçoes:</h2>
+                    <div class="flex flex-col lg:flex-row gap-4 items-center lg:items-start lg:justify-start text-sm sm:text-base">
+                        <div class="max-w-[480px] bg-white rounded-xl">
+                            <h3 class="py-2 px-4 bg-blue-500 text-white rounded-t-xl">Solução com apenas <strong>uma ida</strong>:</h3>
+                            <ul class="list-decimal list-inside py-2 px-4 bg-blue-100">
+                                <li class="mb-2 text-blue-900">Acenderia o interruptor 1 e esperaria cerca de 20 minutos, tempo suficiente para a lâmpada aquecer.</li>
+                                <li class="mb-2 text-blue-900">Desligaria o interruptor 1 e acenderia o 2.</li>
+                                <li class="mb-2 text-blue-900">Correria até a sala de lâmpadas e:</li>
+                            </ul>
+                            <ul class="list-decimal bg-blue-500 list-inside py-2 px-4 rounded-b-xl">
+                                <li class="font-semibold text-white list-disc">A lâmpada apagada e quente seria o interruptor 1.</li>
+                                <li class="font-semibold text-white list-disc">A lâmpada acesa seria o interruptor 2.</li>
+                                <li class="font-semibold text-white list-disc">A lâmpada apagada e fria seria o interruptor 3.</li>
+                            </ul> 
+                        </div>             
+                        <div class="max-w-[480px] bg-white rounded-xl">
+                            <h3 class="py-2 px-4 bg-blue-500 text-white rounded-t-xl">Solução com <strong>duas idas</strong>:</h3>
+                            <ul class="list-decimal list-inside py-2 px-4 bg-blue-100">
+                                <li class="mb-2 text-blue-900">Acenderia o interruptor 1 e 2.</li>
+                                <li class="mb-2 text-blue-900">Iria para a sala de lâmpadas. <span class="italic">*Primeira ida*</span></li>
+                                <li class="mb-2 text-blue-900">Verificar quais lâmpadas estão acesas.</li>
+                                <li class="mb-2 text-blue-900">Voltaria para sala dos interruptores.</li>
+                                <li class="mb-2 text-blue-900">Desligaria o 2 e acenderia o 3.</li>
+                                <li class="mb-2 text-blue-900">Iria novamente para a sala de lâmpadas. <span class="italic">*Segunda ida*</span></li>
+                                <li class="mb-2 text-blue-900">Verificar os estados das lâmpadas e:</li>
+                            </ul>
+                            <ul class="list-decimal bg-blue-500 list-inside py-2 px-4 rounded-b-xl">
+                                  <li class="font-semibold text-white list-disc">A que continuou acesa nas duas idas é o interruptor 1.</li>
+                                  <li class="font-semibold text-white list-disc">A que estava acesa na primeira ida e agora está apagada é o interruptor 2.</li>
+                                  <li class="font-semibold text-white list-disc">( A que está acesa e não é a mesma que estava acesa na primeira ida e consequentemente a que estava apagada na primeira ida ) é o interruptor 3.</li>
+                              </ul>
+                        </div> 
+                    </div>
                 </div>
             </div>
         </section>
