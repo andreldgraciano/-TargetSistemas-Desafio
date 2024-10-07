@@ -1,4 +1,4 @@
-<p align="center"><img src="images/DesafioTargetSistemas.png" width="600" alt="TargetSistemas Logo"></p>
+<p align="center"><img src="docs/images/DesafioTargetSistemas.png" width="600" alt="TargetSistemas Logo"></p>
 
 # Desafio Target Sistemas
 D
