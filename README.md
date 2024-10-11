@@ -1,7 +1,6 @@
-<p align="center"><img src="docs/images/DesafioTargetSistemas.png" width="600" alt="TargetSistemas Logo"></p>
-
 # Desafio Target Sistemas
-D
+
+<p align="center"><img src="docs/images/DesafioTargetSistemas.png" width="600" alt="TargetSistemas Logo"></p>
 
 ## Tabela de Conteúdo
 
